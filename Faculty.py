@@ -12,10 +12,8 @@ class Student(Person):
         self.year = year
         self.mark = mark
 
-    @staticmethod
-    def get_info():
-        print('%s, %s, учится на %s курсе и имеет средний балл %s' % (Person.name, Person.age, Student.year,
-                                                                      Student.mark))
+    def get_info(self):
+        print(self.name + ', ' + self.age + ', учится на ' + self.year + ' курсе и имеет средний балл ' + self.mark)
 
 
 class Teacher(Person):
@@ -25,10 +23,9 @@ class Teacher(Person):
         self.department = department
         self.title = title
 
-    @staticmethod
-    def get_info():
-        print('%s, %s, преподает на кафедре "%s" и имеет ученую степень %s' % (Person.name, Person.age,
-                                                                               Teacher.department, Teacher.title))
+    def get_info(self):
+        print(self.name + ', ' + self.age + ', преподает на кафедре "' + self.department + '" и имеет ученую степень ' 
+        + self.title)
 
 
 class Dean(Person):
@@ -38,16 +35,16 @@ class Dean(Person):
         self.faculty = faculty
 
     def get_info(self):
-        print('%s, %s, занимает должность декана на факультете "%s"' % (Person.name, Person.age, Dean.faculty))
+        print(self.name + ', ' + self.age + ', занимает должность декана на факультете "'+ self.faculty + '"')
 
 
 # Пример выполнения кода:
 
 def main():
-    s1 = Student("Вася", 22, 3, 3.5)
-    s2 = Student("Маша", 19, 2, 4.8)
-    t1 = Teacher("Анатолий", 45, "Механика", "к.т.н")
-    d1 = Dean("Пётр", 56, "Математика")
+    s1 = Student("Вася", "22", "3", "3.5")
+    s2 = Student("Маша", "19", "2", "4.8")
+    t1 = Teacher("Анатолий", "45", "Механика", "к.т.н")
+    d1 = Dean("Пётр", "56", "Математика")
 
     s1.get_info()
     s2.get_info()
