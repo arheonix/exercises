@@ -47,7 +47,7 @@ class Dean(Person):
 #    d1 = Dean("Пётр", "56", "Математика")
 #
 #    s1.get_info()
-#   s2.get_info()
+#    s2.get_info()
 #    t1.get_info()
 #    d1.get_info()
 #
