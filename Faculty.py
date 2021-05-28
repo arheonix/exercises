@@ -6,28 +6,33 @@ class Person:
 
 
 class Student(Person):
+
     def __init__(self, name, age, year, mark):
         Person.__init__(self, name, age)
         self.year = year
         self.mark = mark
 
-    def get_info(self):
-        print('%s, %s, учится на %d курсе и имеет средний балл %s' % (Person.name, Person.age, Student.year,
+    @staticmethod
+    def get_info():
+        print('%s, %s, учится на %s курсе и имеет средний балл %s' % (Person.name, Person.age, Student.year,
                                                                       Student.mark))
 
 
 class Teacher(Person):
+
     def __init__(self, name, age, department, title):
         Person.__init__(self, name, age)
         self.department = department
         self.title = title
 
-    def get_info(self):
-        print('%s, %s, преподает на кафедре "%d" и имеет ученую степень %s' % (Person.name, Person.age,
+    @staticmethod
+    def get_info():
+        print('%s, %s, преподает на кафедре "%s" и имеет ученую степень %s' % (Person.name, Person.age,
                                                                                Teacher.department, Teacher.title))
 
 
 class Dean(Person):
+
     def __init__(self, name, age, faculty):
         Person.__init__(self, name, age)
         self.faculty = faculty
@@ -43,7 +48,7 @@ def main():
     s2 = Student("Маша", 19, 2, 4.8)
     t1 = Teacher("Анатолий", 45, "Механика", "к.т.н")
     d1 = Dean("Пётр", 56, "Математика")
-    
+
     s1.get_info()
     s2.get_info()
     t1.get_info()
