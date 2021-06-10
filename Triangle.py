@@ -7,7 +7,7 @@
 a = int(input())
 b = int(input())
 c = int(input())
-if c == 0:
+if a == 0 or b == 0 or c == 0:
     print('NO')
 elif (a + b) > c:
     print('YES')
