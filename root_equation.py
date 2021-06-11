@@ -16,4 +16,7 @@ elif a == b == c == 0:
     print('MANY SOLUTIONS')
 else:
     x = (c ** 2 - b) / a
-    print(int(x))
+    if int(x) > (-b) / a:
+        print('NO SOLUTION')
+    else:
+        print(int(x))
