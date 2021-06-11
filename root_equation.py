@@ -15,5 +15,5 @@ if c < 0:
 elif a == b == c == 0:
     print('MANY SOLUTIONS')
 else:
-    x = (pow(c, 2) - b) / a
+    x = (c ** 2 - b) / a
     print(int(x))
