@@ -11,7 +11,7 @@ c = int(input())
 
 x = (c * c - b) / a
 x = int(x)
-if not a and b == c * c:
+if a == b == c == 0 and not a and b == c * c:
     print('MANY SOLUTIONS')
 elif c < 0:
     print('NO SOLUTION')
