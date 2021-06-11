@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------
 # Решите в целых числах уравнение:
-#
 # (ax+b)^0.5=c
 # a, b, c – данные целые числа: найдите все решения или сообщите, что решений в целых числах нет.
 # ----------------------------------------------------------------
@@ -10,13 +9,11 @@ a = int(input())
 b = int(input())
 c = int(input())
 
-if c < 0:
-    print('NO SOLUTION')
-elif a == b == c == 0:
+x = (c * c - b) / a
+x = int(x)
+if not a and b == c * c:
     print('MANY SOLUTIONS')
+elif a * x + b == c * c:
+    print(x)
 else:
-    x = (c ** 2 - b) / a
-    if int(x) > (-b) / a:
-        print('NO SOLUTION')
-    else:
-        print(int(x))
+    print('NO SOLUTION')
