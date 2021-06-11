@@ -15,5 +15,7 @@ if a == b == c == 0 and not a and b == c * c:
     print('MANY SOLUTIONS')
 elif c < 0:
     print('NO SOLUTION')
-else:
+elif (a * x + b) ** 0.5 == c:
     print(x)
+else:
+    print('NO SOLUTION')
