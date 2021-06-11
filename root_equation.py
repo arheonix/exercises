@@ -13,7 +13,7 @@ x = (c * c - b) / a
 x = int(x)
 if not a and b == c * c:
     print('MANY SOLUTIONS')
-elif a * x + b == c * c:
-    print(x)
-else:
+elif c < 0:
     print('NO SOLUTION')
+else:
+    print(x)
