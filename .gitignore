@@ -1,0 +1,4 @@
+
+*.json
+*.exe
+py/__pycache__/pyperclip.cpython-39.pyc
